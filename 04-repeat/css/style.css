@@ -1,0 +1,38 @@
+
+h2 {
+    margin: 0;
+}
+.servicios {
+    border: 3px solid black;
+    height: 300px;
+    display: grid;
+    /*repeat: tomas 2 parametros; 1. el numero de veces que quiero que se repita, 2. el tamaño*/
+    /*
+    grid-template-columns: 50% repeat(2, 25%);
+    */
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: (2, 50%);
+
+    /*row/ colums*/
+    grid: repeat(2, 50%) / repeat(3, 33.3%);
+    /*grid: repeat(2, 50%) / 50% repeat(2, 25%);*/
+    grid: repeat(2, 50%) / repeat(2, 10% 40%);
+
+
+}
+
+.servicio {
+    color: white;
+    text-align: center;
+}
+
+.servicio-1 {
+    background-color: darkviolet;
+}
+
+.servicio-2 {
+    background-color: limegreen;
+}
+.servicio-3 {
+    background-color: teal;
+}

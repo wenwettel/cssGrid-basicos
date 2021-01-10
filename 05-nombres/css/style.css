@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+h1 {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+
+.contenedor {
+    /*el contendor abarca toda la ventana IMPORTANTE*/
+    height: 100vh;
+    width: 900px;
+    margin: 0 auto;
+    
+    /*Row y Columns, tenemos un diseño 3 filas y 4 columnas*/
+    grid: 100px auto 100px/ repeat(4, 25%);
+    display: grid;
+    /*Segunda forma con template Area*/
+    grid-template-areas: 
+        "header header header header" /*1. se le asigna un nombre a cada area*/
+        "principal principal principal sidebar" /*3*/
+        ". footer footer footer" /*si se quiere dejar un espacio en blanco se escribe un punto*/
+}
+
+.header {
+    background-color: coral;
+    color: white;
+    text-align: center;
+    /*Primera forma de organizarlo
+    grid-column: 1 / 5;
+    */
+
+    /*2. se pasa ese nombre asignado al elemento*/
+    grid-area: header;
+
+}
+
+.contenido-principal {
+    background-color: darkred;
+    /*Primera forma de organizarlo
+    grid-column: 1/4;
+    */
+
+    /*3. segunda fila*/
+    grid-area: principal;
+}
+.sidebar {
+    background-color: olive;
+}
+
+.footer {
+    background-color: navy;
+    /*Primera forma de organizarlo
+    grid-column: 1 /5 ;
+    */
+
+    grid-area: footer;
+}
+
+
+/*Index3.html*/
+
+.contenedor-media {
+    margin: 0 auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "slogan"
+    "info"
+    "imagen"
+    "entrada";
+  
+}
+
+@media screen and (min-width:768px) {
+    .contenedor-media {
+        grid-template-areas: 
+    "titulo titulo"
+    "imagen slogan"
+    "imagen info"
+    "entrada entrada";
+
+    grid-template-columns: 50% 50%;
+
+    }
+}
+
+.titulo {
+    grid-area:titulo ;
+   
+}
+.imagen {
+    grid-area: imagen;
+}
+
+.slogan {
+    grid-area:slogan ;
+}
+.info {
+    grid-area: info ;
+}
+.entrada {
+    grid-area: entrada;
+}

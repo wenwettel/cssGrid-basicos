@@ -1,0 +1,34 @@
+
+h2 {
+    margin: 0;
+}
+.servicios {
+    border: 3px solid black;
+    height: 300px;
+}
+
+.servicios {
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+
+    /*Grid: row row / columns columns columns*/
+    grid: 50% 50% / 33% 33% 33%;
+}
+
+.servicio-1 {
+    background-color: darkviolet;
+    grid-row : 1/ 3;
+    grid-column: 1 / 3;
+    /*Grid Area: 1ero de row/ 1ero de column/ ultimo de row /ultimo de column*/
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.servicio-2 {
+    background-color: limegreen;
+}
+.servicio-3 {
+    background-color: teal;
+}
